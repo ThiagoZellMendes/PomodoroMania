@@ -8,4 +8,6 @@ Em geral, pomodoro é uma ferramenta útil para quem deseja gerenciar seu tempo 
 - [x] Create Default Folder Structure(Vite);
 - [x] Implement Routers(Reac-router-dom-Lib);
 - [x] Configure Eslint;
+- [x] Implement Header Components;
+- [x] Created Layout Default;
 
