@@ -1,6 +1,18 @@
 import styled from 'styled-components'
+import { STATUS_COLORS, StatusProps } from './props'
 
 export const HistoryContainer = styled.main`
+  flex: 1;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1.5rem;
+    color: ${(props) => props.theme['gray-100']};
+  }
+`
+export const HistoryList = styled.div`
   flex: 1;
   overflow: auto;
   margin-top: 2rem;
@@ -35,6 +47,7 @@ export const HistoryContainer = styled.main`
     line-height: 1.6;
 
     &:first-child {
+      width: 50%;
       padding-left: 1.5rem;
     }
     &:last-child {
@@ -42,4 +55,17 @@ export const HistoryContainer = styled.main`
     }
   }
 `
-export const HistoryList = styled.div``
+
+export const Status = styled.span<StatusProps>`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: ${(props) => props.theme[STATUS_COLORS[props.statusColor]]};
+  }
+`
